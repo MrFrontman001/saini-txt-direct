@@ -518,8 +518,8 @@ async def start(bot, m: Message):
     await asyncio.sleep(1)
     if m.chat.id in AUTH_USERS:
         keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton("💎 Features", callback_data="feat_command"), InlineKeyboardButton("🕸️ Commands", callback_data="cmd_command")],
-            [InlineKeyboardButton("💳 Plans", callback_data="upgrade_command")],
+            [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("🕸️ Commands", callback_data="cmd_command")],
+            [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ", callback_data="upgrade_command")],
             [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="https://t.me/DevThanos")],
         ])
         
@@ -532,8 +532,8 @@ async def start(bot, m: Message):
     else:
         await asyncio.sleep(2)
         keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton("💎 Features", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
-            [InlineKeyboardButton("💳 Plans", callback_data="upgrade_command")],
+            [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
+            [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ", callback_data="upgrade_command")],
             [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="http://t.me/DevThanos")],
         ])
         await start_message.edit_text(
@@ -547,8 +547,8 @@ async def back_to_main_menu(client, callback_query):
     first_name = callback_query.from_user.first_name
     caption = f"✨ **Welcome [{first_name}](tg://user?id={user_id}) in My uploader bot**"
     keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton("💎 Features", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
-            [InlineKeyboardButton("💳 Plans", callback_data="upgrade_command")],
+            [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
+            [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ", callback_data="upgrade_command")],
             [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="https://t.me/DevThanos")],
         ])
     
@@ -683,11 +683,11 @@ async def feature_button(client, callback_query):
   caption = "**✨ My Premium BOT Features :**"
   keyboard = InlineKeyboardMarkup([
       [InlineKeyboardButton("📌 Aᴜᴛᴏ ᴘɪɴ ʙᴀᴛᴄʜ", callback_data="pin_command")],
-      [InlineKeyboardButton("🖼️ Wᴀᴛᴇʀᴍᴀʀᴋ", callback_data="watermark_command"), InlineKeyboardButton("🔄 Reset", callback_data="reset_command")],
+      [InlineKeyboardButton("🖼️ Wᴀᴛᴇʀᴍᴀʀᴋ", callback_data="watermark_command"), InlineKeyboardButton("Rᴇꜱᴇᴛ 🗑️", callback_data="reset_command")],
       [InlineKeyboardButton("🧑‍💻 Bᴏᴛ Lᴏɢꜱ", callback_data="logs_command")],
-      [InlineKeyboardButton("📂 Fɪʟᴇ Nᴀᴍᴇ ", callback_data="custom_command"), InlineKeyboardButton("🏷️ Title", callback_data="titlle_command")],
+      [InlineKeyboardButton("📂 Fɪʟᴇ Nᴀᴍᴇ ", callback_data="custom_command"), InlineKeyboardButton("🏷️ Tɪᴛʟᴇ", callback_data="titlle_command")],
       [InlineKeyboardButton("🎞️ YᴏᴜTᴜʙᴇ", callback_data="yt_command")],
-      [InlineKeyboardButton("📄 Txᴛ Fɪʟᴇ", callback_data="txt_maker_command"), InlineKeyboardButton("📢 Broadcast", callback_data="broadcast_command")],
+      [InlineKeyboardButton("📄 Txᴛ Fɪʟᴇ", callback_data="txt_maker_command"), InlineKeyboardButton("Bʀᴏᴀᴅᴄᴀꜱᴛ 🔔", callback_data="broadcast_command")],
       [InlineKeyboardButton("𓆩ཫ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ཀ𓆪", callback_data="back_to_main_menu")]
   ])
   await callback_query.message.edit_media(
@@ -700,7 +700,7 @@ async def feature_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("pin_command"))
 async def pin_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
   caption = f"**Auto Pin 📌 Batch Name :**\n\nAutomatically Pins the Batch Name in Channel or Group, If Starting from the First Link."
   await callback_query.message.edit_media(
     InputMediaPhoto(
@@ -712,7 +712,7 @@ async def pin_button(client, callback_query):
     
 @bot.on_callback_query(filters.regex("watermark_command"))
 async def watermark_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
   caption = f"**Custom Watermark :**\n\nSet Your Own Custom Watermark on Videos for Added Personalization."
   await callback_query.message.edit_media(
     InputMediaPhoto(
@@ -725,8 +725,8 @@ async def watermark_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("reset_command"))
 async def restart_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
-  caption = f"**🔄 Reset Command:**\n\nIf You Want to Reset or Restart Your Bot, Simply Use Command /reset."
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
+  caption = f"**🗑️ Rᴇꜱᴇᴛ Cᴏᴍᴍᴀɴᴅ:**\n\nIғ Yᴏᴜ Wᴀɴᴛ ᴛᴏ Rᴇꜱᴇᴛ ᴏʀ Rᴇꜱᴛᴀʀᴛ Yᴏᴜʀ Bᴏᴛ, Sɪᴍᴘʟʏ Uꜱᴇ Cᴏᴍᴍᴀɴᴅ /reset."
   await callback_query.message.edit_media(
     InputMediaPhoto(
       media="https://tinypic.host/images/2025/07/14/file_000000002d44622f856a002a219cf27aconversation_id68747543-56d8-800e-ae47-bb6438a09851message_id8e8cbfb5-ea6c-4f59-974a-43bdf87130c0.png",
@@ -737,7 +737,7 @@ async def restart_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("logs_command"))
 async def pin_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
   caption = f"**🖨️ Bot Working Logs:**\n\n◆/logs - Bot Send Working Logs in .txt File."
   await callback_query.message.edit_media(
     InputMediaPhoto(
@@ -749,7 +749,7 @@ async def pin_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("custom_command"))
 async def custom_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
   caption = f"**🖋️ Custom File Name:**\n\nSupport for Custom Name before the File Extension.\nAdd name ..when txt is uploading"
   await callback_query.message.edit_media(
     InputMediaPhoto(
@@ -761,7 +761,7 @@ async def custom_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("titlle_command"))
 async def titlle_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
   caption = f"**Custom Title Feature :**\nAdd and customize titles at the starting\n**NOTE 📍 :** The Titile must enclosed within (Title), Best For appx's .txt file."
   await callback_query.message.edit_media(
     InputMediaPhoto(
@@ -773,7 +773,7 @@ async def titlle_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("broadcast_command"))
 async def pin_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
   caption = f"**📢 Broadcasting Support:**\n\n◆/broadcast - 📢 Broadcast to All Users.\n◆/broadusers - 👁️ To See All Broadcasting User"
   await callback_query.message.edit_media(
     InputMediaPhoto(
@@ -785,7 +785,7 @@ async def pin_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("txt_maker_command"))
 async def editor_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
   caption = f"**🤖 Available Commands 🗓️**\n◆/t2t for text to .txt file\n"
   await callback_query.message.edit_media(
     InputMediaPhoto(
@@ -797,7 +797,7 @@ async def editor_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("yt_command"))
 async def y2t_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
   caption = f"**YouTube Commands:**\n\n◆/y2t - 🔪 YouTube Playlist → .txt Converter\n◆/ytm - 🎶 YouTube → .mp3 downloader\n\n<blockquote><b>◆YouTube → .mp3 downloader\n01. Send YouTube Playlist.txt file\n02. Send single or multiple YouTube links set\neg.\n`https://www.youtube.com/watch?v=xxxxxx\nhttps://www.youtube.com/watch?v=yyyyyy`</b></blockquote>"
   await callback_query.message.edit_media(
     InputMediaPhoto(
