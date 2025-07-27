@@ -518,9 +518,9 @@ async def start(bot, m: Message):
     await asyncio.sleep(1)
     if m.chat.id in AUTH_USERS:
         keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("🕸️ Commands", callback_data="cmd_command")],
-            [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ", callback_data="upgrade_command")],
-            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="https://t.me/DevThanos")],
+            [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅꜱ 🪧", callback_data="cmd_command")],
+            [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ 🗓️", callback_data="upgrade_command")],
+            [InlineKeyboardButton(text="☎️ Cᴏɴᴛᴀᴄᴛ", url="https://t.me/MrFrontMan001"), InlineKeyboardButton(text="Cʜᴀɴɴᴇʟ 📢", url="https://t.me/DevThanos")],
         ])
         
         await start_message.edit_text(
@@ -532,9 +532,9 @@ async def start(bot, m: Message):
     else:
         await asyncio.sleep(2)
         keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
-            [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ", callback_data="upgrade_command")],
-            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="http://t.me/DevThanos")],
+            [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅꜱ 🪧", callback_data="cmd_command")],
+            [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ 🗓️", callback_data="upgrade_command")],
+            [InlineKeyboardButton(text="☎️ Cᴏɴᴛᴀᴄᴛ", url="https://t.me/MrFrontMan001"), InlineKeyboardButton(text="Cʜᴀɴɴᴇʟ 📢", url="http://t.me/DevThanos")],
         ])
         await start_message.edit_text(
            f"Hᴇʏ Mʀ.{m.from_user.first_name}☘️\n\n"
@@ -545,11 +545,11 @@ async def start(bot, m: Message):
 async def back_to_main_menu(client, callback_query):
     user_id = callback_query.from_user.id
     first_name = callback_query.from_user.first_name
-    caption = f"✨ **Hᴇʏ Mʀ.[{first_name}](tg://user?id={user_id}) ☘️ in My uploader bot**"
+    caption = f"✨ **Hᴇʏ Mʀ.[{first_name}](tg://user?id={user_id}) ☘️**"
     keyboard = InlineKeyboardMarkup([
-            [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
-            [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ", callback_data="upgrade_command")],
-            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="https://t.me/DevThanos")],
+            [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅꜱ 🪧", callback_data="cmd_command")],
+            [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ 🗓️", callback_data="upgrade_command")],
+            [InlineKeyboardButton(text="☎️ Cᴏɴᴛᴀᴄᴛ", url="https://t.me/MrFrontMan001"), InlineKeyboardButton(text="Cʜᴀɴɴᴇʟ 📢", url="https://t.me/DevThanos")],
         ])
     
     await callback_query.message.edit_media(
