@@ -493,28 +493,28 @@ async def start(bot, m: Message):
         caption=caption
     )
 
-    await asyncio.sleep(1)
+    await asyncio.sleep(0.1)
     await start_message.edit_text(
         f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
         f"Initializing Uploader bot... 🤖\n\n"
         f"Progress: [⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 0%\n\n"
     )
 
-    await asyncio.sleep(1)
+    await asyncio.sleep(0.1)
     await start_message.edit_text(
         f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
         f"Loading features... ⏳\n\n"
         f"Progress: [🟥🟥🟥⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 25%\n\n"
     )
     
-    await asyncio.sleep(1)
+    await asyncio.sleep(0.1)
     await start_message.edit_text(
         f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
         f"This may take a moment, sit back and relax! 😊\n\n"
         f"Progress: [🟧🟧🟧🟧🟧⬜️⬜️⬜️⬜️⬜️] 50%\n\n"
     )
 
-    await asyncio.sleep(1)
+    await asyncio.sleep(0.1)
     await start_message.edit_text(
         f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
         f"Checking subscription status... 🔍\n\n"
