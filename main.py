@@ -497,28 +497,22 @@ async def start(bot, m: Message):
     await start_message.edit_text(
         f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
         f"Initializing Uploader bot... 🤖\n\n"
-        f"Progress: [⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 0%\n\n"
+        f"Pʀᴏɢʀᴇꜱꜱ: [⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 0%\n\n"
     )
 
     await asyncio.sleep(0.1)
     await start_message.edit_text(
-        f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
-        f"Loading features... ⏳\n\n"
-        f"Progress: [🟥🟥🟥⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 25%\n\n"
+        f"Pʀᴏɢʀᴇꜱꜱ: [🟥🟥🟥⬜️⬜️⬜️⬜️⬜️⬜️⬜️] 25%\n\n"
     )
     
     await asyncio.sleep(0.1)
     await start_message.edit_text(
-        f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
-        f"This may take a moment, sit back and relax! 😊\n\n"
-        f"Progress: [🟧🟧🟧🟧🟧⬜️⬜️⬜️⬜️⬜️] 50%\n\n"
+        f"Pʀᴏɢʀᴇꜱꜱ: [🟧🟧🟧🟧🟧⬜️⬜️⬜️⬜️⬜️] 50%\n\n"
     )
 
     await asyncio.sleep(0.1)
     await start_message.edit_text(
-        f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
-        f"Checking subscription status... 🔍\n\n"
-        f"Progress: [🟨🟨🟨🟨🟨🟨🟨🟨⬜️⬜️] 75%\n\n"
+        f"Pʀᴏɢʀᴇꜱꜱ: [🟨🟨🟨🟨🟨🟨🟨🟨⬜️⬜️] 75%\n\n"
     )
 
     await asyncio.sleep(1)
@@ -526,7 +520,7 @@ async def start(bot, m: Message):
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("💎 Features", callback_data="feat_command"), InlineKeyboardButton("🕸️ Commands", callback_data="cmd_command")],
             [InlineKeyboardButton("💳 Plans", callback_data="upgrade_command")],
-            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct")],
+            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="https://t.me/DevThanos")],
         ])
         
         await start_message.edit_text(
@@ -540,7 +534,7 @@ async def start(bot, m: Message):
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("💎 Features", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
             [InlineKeyboardButton("💳 Plans", callback_data="upgrade_command")],
-            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct")],
+            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="http://t.me/DevThanos")],
         ])
         await start_message.edit_text(
            f" 🎉 Welcome {m.from_user.first_name} to DRM Bot! 🎉\n\n"
@@ -555,7 +549,7 @@ async def back_to_main_menu(client, callback_query):
     keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("💎 Features", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
             [InlineKeyboardButton("💳 Plans", callback_data="upgrade_command")],
-            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct")],
+            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="https://t.me/DevThanos")],
         ])
     
     await callback_query.message.edit_media(
@@ -573,8 +567,8 @@ async def cmd(client, callback_query):
     first_name = callback_query.from_user.first_name
     caption = f"✨ **Welcome [{first_name}](tg://user?id={user_id})\nChoose Button to select Commands**"
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🚻 User", callback_data="user_command"), InlineKeyboardButton("🚹 Owner", callback_data="owner_command")],
-        [InlineKeyboardButton("🔙 Back to Main Menu", callback_data="back_to_main_menu")]
+        [InlineKeyboardButton("👥 Users", callback_data="user_command"), InlineKeyboardButton("🍁 Admin", callback_data="owner_command")],
+        [InlineKeyboardButton("👩‍🦯 Back", callback_data="back_to_main_menu")]
     ])
     await callback_query.message.edit_media(
     InputMediaPhoto(
@@ -688,13 +682,13 @@ async def upgrade_button(client, callback_query):
 async def feature_button(client, callback_query):
   caption = "**✨ My Premium BOT Features :**"
   keyboard = InlineKeyboardMarkup([
-      [InlineKeyboardButton("📌 Auto Pin Batch Name", callback_data="pin_command")],
-      [InlineKeyboardButton("💧 Watermark", callback_data="watermark_command"), InlineKeyboardButton("🔄 Reset", callback_data="reset_command")],
-      [InlineKeyboardButton("🖨️ Bot Working Logs", callback_data="logs_command")],
-      [InlineKeyboardButton("🖋️ File Name", callback_data="custom_command"), InlineKeyboardButton("🏷️ Title", callback_data="titlle_command")],
-      [InlineKeyboardButton("🎥 YouTube", callback_data="yt_command")],
-      [InlineKeyboardButton("📝 Text File", callback_data="txt_maker_command"), InlineKeyboardButton("📢 Broadcast", callback_data="broadcast_command")],
-      [InlineKeyboardButton("🔙 Back to Main Menu", callback_data="back_to_main_menu")]
+      [InlineKeyboardButton("📌 Aᴜᴛᴏ ᴘɪɴ ʙᴀᴛᴄʜ", callback_data="pin_command")],
+      [InlineKeyboardButton("🖼️ Wᴀᴛᴇʀᴍᴀʀᴋ", callback_data="watermark_command"), InlineKeyboardButton("🔄 Reset", callback_data="reset_command")],
+      [InlineKeyboardButton("🧑‍💻 Bᴏᴛ Lᴏɢꜱ", callback_data="logs_command")],
+      [InlineKeyboardButton("📂 Fɪʟᴇ Nᴀᴍᴇ ", callback_data="custom_command"), InlineKeyboardButton("🏷️ Title", callback_data="titlle_command")],
+      [InlineKeyboardButton("🎞️ YᴏᴜTᴜʙᴇ", callback_data="yt_command")],
+      [InlineKeyboardButton("📄 Txᴛ Fɪʟᴇ", callback_data="txt_maker_command"), InlineKeyboardButton("📢 Broadcast", callback_data="broadcast_command")],
+      [InlineKeyboardButton("𓆩ཫ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ཀ𓆪", callback_data="back_to_main_menu")]
   ])
   await callback_query.message.edit_media(
     InputMediaPhoto(
