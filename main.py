@@ -524,10 +524,10 @@ async def start(bot, m: Message):
         ])
         
         await start_message.edit_text(
-            f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
-            f"Great! You are a premium member!\n"
-            f"Use button : **✨ Commands** to get started 🌟\n\n"
-            f"If you face any problem contact -  [{CREDIT}⁬](tg://openmessage?user_id={OWNER})\n", disable_web_page_preview=True, reply_markup=keyboard
+            f"Hᴇʏ Mʀ.[{first_name}](tg://user?id={user_id})☘️\n\n" +
+            f"Yᴏᴜ ᴀʀᴇ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴏᴜʀ ʙᴏᴛ ᴡɪᴛʜᴏᴜᴛ ʟɪᴍɪᴛᴀᴛɪᴏɴ\n"
+            f"ᴄʟɪᴄᴋ ᴏɴ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴋɴᴏᴡ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇꜱ\n\n"
+            f"Iғ ʏᴏᴜ ғᴀᴄɪɴɢ ᴇʀʀᴏʀ Cᴏɴᴛᴀᴄᴛ Uꜱ[Cᴏɴᴛᴀᴄᴛ Uꜱ.⁬](https://t.me/MrFrontMan001)\n", disable_web_page_preview=True, reply_markup=keyboard
         )
     else:
         await asyncio.sleep(2)
@@ -537,7 +537,7 @@ async def start(bot, m: Message):
             [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="Channel 📢", url="http://t.me/DevThanos")],
         ])
         await start_message.edit_text(
-           f" 🎉 Welcome {m.from_user.first_name} to DRM Bot! 🎉\n\n"
+           f"Hᴇʏ Mʀ.[{first_name}](tg://user?id={user_id})☘️\n\n"
            f"**You are currently using the free version.** 🆓\n\n<blockquote expandable>I'm here to make your life easier by downloading videos from your **.txt** file 📄 and uploading them directly to Telegram!</blockquote>\n\n**Want to get started? Press /id**\n\n💬 Contact : [{CREDIT}⁬](tg://openmessage?user_id={OWNER}) to Get The Subscription 🎫 and unlock the full potential of your new bot! 🔓\n", disable_web_page_preview=True, reply_markup=keyboard
     )
 
@@ -545,7 +545,7 @@ async def start(bot, m: Message):
 async def back_to_main_menu(client, callback_query):
     user_id = callback_query.from_user.id
     first_name = callback_query.from_user.first_name
-    caption = f"✨ **Welcome [{first_name}](tg://user?id={user_id}) in My uploader bot**"
+    caption = f"✨ **Hᴇʏ Mʀ.[{first_name}](tg://user?id={user_id})☘️ in My uploader bot**"
     keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
             [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ", callback_data="upgrade_command")],
@@ -565,7 +565,7 @@ async def back_to_main_menu(client, callback_query):
 async def cmd(client, callback_query):
     user_id = callback_query.from_user.id
     first_name = callback_query.from_user.first_name
-    caption = f"✨ **Welcome [{first_name}](tg://user?id={user_id})\nChoose Button to select Commands**"
+    caption = f"**Hᴇʏ Mʀ.[{first_name}](tg://user?id={user_id})☘️**"
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("👥 Users", callback_data="user_command"), InlineKeyboardButton("🍁 Admin", callback_data="owner_command")],
         [InlineKeyboardButton("👩‍🦯 Back", callback_data="back_to_main_menu")]
