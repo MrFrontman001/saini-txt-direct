@@ -524,8 +524,7 @@ async def start(bot, m: Message):
         ])
         
         await start_message.edit_text(
-            f"<b>Mʀ. {m.from_user.first_name}  ☘️</b>\n\n" +
-            f"<b><blockquote expandable>Yᴏᴜ ᴀʀᴇ ᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀ 🔖\n\n ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴏᴜʀ ʙᴏᴛ ᴡɪᴛʜᴏᴜᴛ ʟɪᴍɪᴛᴀᴛɪᴏɴ\n ᴄʟɪᴄᴋ ᴏɴ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴋɴᴏᴡ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇꜱ</blockquote></b>\n\n\n" +
+            f"<b><blockquote expandable>Yᴏᴜ ᴀʀᴇ ᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀ {m.from_user.first_name} 🔖\n\n ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴏᴜʀ ʙᴏᴛ ᴡɪᴛʜᴏᴜᴛ ʟɪᴍɪᴛᴀᴛɪᴏɴ\n ᴄʟɪᴄᴋ ᴏɴ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴋɴᴏᴡ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇꜱ</blockquote></b>\n\n\n" +
             f"<b><blockquote>‣ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ғʀᴏɴᴛᴍᴀɴ⁬ 🦅](https://t.me/MrFrontMan001)</b></blockquote>", disable_web_page_preview=True, reply_markup=keyboard
         )
     else:
@@ -544,7 +543,7 @@ async def start(bot, m: Message):
 async def back_to_main_menu(client, callback_query):
     user_id = callback_query.from_user.id
     first_name = callback_query.from_user.first_name
-    caption = f"✨ **Hᴇʏ Mʀ.[{first_name}](tg://user?id={user_id}) ☘️**"
+    caption = f"<b><blockquote>ᴡᴇʟᴄᴏᴍᴇ [{first_name}](tg://user?id={user_id}) 🔖\n\n ᴄʟɪᴄᴋ ᴏɴ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴋɴᴏᴡ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇꜱ</blockquote>\n\n\n<blockquote>‣ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ғʀᴏɴᴛᴍᴀɴ⁬ 🦅](https://t.me/MrFrontMan001)</b></blockquote>"
     keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅꜱ 🪧", callback_data="cmd_command")],
             [InlineKeyboardButton("🗓️ Pʟᴀɴꜱ 🗓️", callback_data="upgrade_command")],
