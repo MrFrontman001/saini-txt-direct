@@ -601,21 +601,28 @@ async def help_button(client, callback_query):
 @bot.on_callback_query(filters.regex("owner_command"))
 async def help_button(client, callback_query):
     user_id = callback_query.from_user.id
-    first_name = callback_query.from_user.first_name
-    keyboard = InlineKeyboardMarkup(
-        [[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]]
-    )
+    owner_id = OWNER  # vars.py से import किया गया OWNER; यह int या str हो सकता है
 
-    caption = OWNER_COMMANDS_CAPTION  # अब सिर्फ डायरेक्ट इस्तेमाल करें, कोई .format नहीं
+    if str(user_id) == str(owner_id):  # Type मिक्स हो सकता है, इसलिए str comparison better है
+        keyboard = InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]]
+        )
 
-    await callback_query.message.edit_media(
-        media=InputMediaPhoto(
-            media="https://files.catbox.moe/9cqh82.jpg",
-            caption=caption,
-            parse_mode=ParseMode.HTML  # Enable HTML parsing
-        ),
-        reply_markup=keyboard
-    )
+        caption = OWNER_COMMANDS_CAPTION
+
+        await callback_query.message.edit_media(
+            media=InputMediaPhoto(
+                media="https://files.catbox.moe/9cqh82.jpg",
+                caption=caption,
+                parse_mode=ParseMode.HTML
+            ),
+            reply_markup=keyboard
+        )
+    else:
+        await callback_query.answer(
+            "ᴡʜᴀᴛ ᴀʀᴇ ʏᴏᴜ ᴅᴏɪɴɢ 💥",
+            show_alert=True
+        )
 
 @bot.on_callback_query(filters.regex("upgrade_command"))
 async def upgrade_button(client, callback_query):
