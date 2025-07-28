@@ -524,10 +524,9 @@ async def start(bot, m: Message):
         ])
         
         await start_message.edit_text(
-            f"Hᴇʏ Mʀ.{m.from_user.first_name}☘️\n\n" +
-            f"Yᴏᴜ ᴀʀᴇ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀ ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴏᴜʀ ʙᴏᴛ ᴡɪᴛʜᴏᴜᴛ ʟɪᴍɪᴛᴀᴛɪᴏɴ\n"
-            f"ᴄʟɪᴄᴋ ᴏɴ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴋɴᴏᴡ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇꜱ\n\n"
-            f"Iғ ʏᴏᴜ ғᴀᴄɪɴɢ ᴇʀʀᴏʀ Cᴏɴᴛᴀᴄᴛ Uꜱ[Cᴏɴᴛᴀᴄᴛ Uꜱ.⁬](https://t.me/MrFrontMan001)\n", disable_web_page_preview=True, reply_markup=keyboard
+            f"<b>Mʀ. {m.from_user.first_name}  ☘️</b>\n" +
+            f"<blockquote expandable>Yᴏᴜ ᴀʀᴇ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀ\n\n ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴏᴜʀ ʙᴏᴛ ᴡɪᴛʜᴏᴜᴛ ʟɪᴍɪᴛᴀᴛɪᴏɴ\n ᴄʟɪᴄᴋ ᴏɴ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴋɴᴏᴡ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇꜱ</blockquote>\n\n\n" +
+            f"<blockquote expandable>‣ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ғʀᴏɴᴛᴍᴀɴ⁬ 🦅](https://t.me/MrFrontMan001)<blockquote>", disable_web_page_preview=True, reply_markup=keyboard
         )
     else:
         await asyncio.sleep(2)
@@ -537,7 +536,7 @@ async def start(bot, m: Message):
             [InlineKeyboardButton(text="☎️ Cᴏɴᴛᴀᴄᴛ", url="https://t.me/MrFrontMan001"), InlineKeyboardButton(text="Cʜᴀɴɴᴇʟ 📢", url="http://t.me/DevThanos")],
         ])
         await start_message.edit_text(
-           f"Hᴇʏ Mʀ.{m.from_user.first_name}☘️\n\n"
+           f"Hᴇʏ {m.from_user.first_name}☘️\n\n"
            f"**You are currently using the free version.** 🆓\n\n<blockquote expandable>I'm here to make your life easier by downloading videos from your **.txt** file 📄 and uploading them directly to Telegram!</blockquote>\n\n**Want to get started? Press /id**\n\n💬 Contact : [{CREDIT}⁬](tg://openmessage?user_id={OWNER}) to Get The Subscription 🎫 and unlock the full potential of your new bot! 🔓\n", disable_web_page_preview=True, reply_markup=keyboard
     )
 
@@ -1632,22 +1631,15 @@ def reset_and_set_commands():
     requests.post(url, json={"commands": []})
     # Set new
     commands = [
-        {"command": "start", "description": "✅ Check Alive the Bot"},
-        {"command": "stop", "description": "🚫 Stop the ongoing process"},
-        {"command": "broadcast", "description": "📢 Broadcast to All Users"},
-        {"command": "broadusers", "description": "👨‍❤️‍👨 All Broadcasting Users"},
-        {"command": "drm", "description": "📑 Upload .txt file"},
-        {"command": "cookies", "description": "📁 Upload YT Cookies"},
-        {"command": "y2t", "description": "🔪 YouTube → .txt Converter"},
-        {"command": "ytm", "description": "🎶 YouTube → .mp3 downloader"},
-        {"command": "t2t", "description": "📟 Text → .txt Generator"},
-        {"command": "reset", "description": "✅ Reset the Bot"},
-        {"command": "id", "description": "🆔 Get Your ID"},
-        {"command": "info", "description": "ℹ️ Check Your Information"},
-        {"command": "logs", "description": "👁️ View Bot Activity"},
-        {"command": "addauth", "description": "▶️ Add Authorisation"},
-        {"command": "rmauth", "description": "⏸️ Remove Authorisation "},
-        {"command": "users", "description": "👨‍👨‍👧‍👦 All Premium Users"}
+        {"command": "start", "description": "🤖 Cʜᴇᴄᴋ ʙᴏᴛ ɪꜱ ʟɪᴠᴇ"},
+        {"command": "stop", "description": "🛑 Sᴛᴏᴘ ᴄᴜʀʀᴇɴᴛ ᴀᴄᴛɪᴠɪᴛʏ"},
+        {"command": "drm", "description": "📬 Uᴘʟᴏᴀᴅ .ᴛxᴛ ғɪʟᴇ"},
+        {"command": "y2t", "description": "📮 YᴏᴜTᴜʙᴇ → .ᴛxᴛ ᴄᴏɴᴠᴇʀᴛᴇʀ"},
+        {"command": "ytm", "description": "🪧 YᴏᴜTᴜʙᴇ → .ᴍᴘ𝟹 ᴅᴏᴡɴʟᴏᴀᴅᴇʀ"},
+        {"command": "t2t", "description": "📁 Tᴇxᴛ → .ᴛxᴛ ɢᴇɴᴇʀᴀᴛᴏʀ"},
+        {"command": "id", "description": "🆔 ɢᴇᴛ TG ɪᴅ"},
+        {"command": "info", "description": "📜 Gᴇᴛ ʏᴏᴜʀ ᴛɢ ɪɴғᴏ"},
+        {"command": "logs", "description": "👨‍💻 Rᴇᴄᴇɴᴛʟʏ ᴀᴄᴛɪᴠɪᴛʏ"},
     ]
     requests.post(url, json={"commands": commands})
     
