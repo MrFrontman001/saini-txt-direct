@@ -1,6 +1,4 @@
-# Script.py
-
-    OWNER_COMMANDS_CAPTION = """
+OWNER_COMMANDS_CAPTION = """
 👤 <b>𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬</b>
 
 ➥ /addauth xxxx – Add User ID  
