@@ -33,7 +33,7 @@ from pyrogram.errors import FloodWait, PeerIdInvalid, UserIsBlocked, InputUserDe
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from Script import OWNER_COMMANDS_CAPTION
+from Script import OWNER_COMMANDS_CAPTION, USER_COMMANDS_CAPTION, UPGRADE_COMMANDS_CAPTION
 from pyrogram.enums import ParseMode
 import aiohttp
 import aiofiles
@@ -581,40 +581,21 @@ async def cmd(client, callback_query):
 
 @bot.on_callback_query(filters.regex("user_command"))
 async def help_button(client, callback_query):
-  user_id = callback_query.from_user.id
-  first_name = callback_query.from_user.first_name
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]])
-  caption = (
-        f"💥 𝐁𝐎𝐓𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒\n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n" 
-        f"📌 𝗠𝗮𝗶𝗻 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀:\n\n"  
-        f"➥ /start – Bot Status Check\n"
-        f"➥ /drm – Extract from .txt (Auto)\n"
-        f"➥ /y2t – YouTube → .txt Converter\n"  
-        f"➥ /ytm – YouTube → .mp3 downloader\n"  
-        f"➥ /t2t – Text → .txt Generator\n" 
-        f"➥ /stop – Cancel Running Task\n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ \n" 
-        f"⚙️ 𝗧𝗼𝗼𝗹𝘀 & 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀: \n\n" 
-        f"➥ /cookies – Update YT Cookies\n" 
-        f"➥ /id – Get Chat/User ID\n"  
-        f"➥ /info – User Details\n"  
-        f"➥ /logs – View Bot Activity\n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
-        f"💡 𝗡𝗼𝘁𝗲:\n\n"  
-        f"• Send any link for auto-extraction\n"  
-        f"• Supports batch processing\n\n"  
-        f"╭────────⊰◆⊱────────╮\n"   
-        f" ➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : {CREDIT} 💻\n"
-        f"╰────────⊰◆⊱────────╯\n"
-  )
-    
-  await callback_query.message.edit_media(
-    InputMediaPhoto(
-      media="https://tinypic.host/images/2025/07/14/file_00000000fc2461fbbdd6bc500cecbff8_conversation_id6874702c-9760-800e-b0bf-8e0bcf8a3833message_id964012ce-7ef5-4ad4-88e0-1c41ed240c03-1-1.jpg",
-      caption=caption
-    ),
-    reply_markup=keyboard
+    user_id = callback_query.from_user.id
+    first_name = callback_query.from_user.first_name
+    keyboard = InlineKeyboardMarkup(
+        [[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]]
+    )
+
+    caption = USER_COMMANDS_CAPTION.format(credit=CREDIT)
+
+    await callback_query.message.edit_media(
+        media=InputMediaPhoto(
+            media="https://files.catbox.moe/9cqh82.jpg",
+            caption=caption,
+            parse_mode=ParseMode.HTML  # Enable HTML parsing
+        ),
+        reply_markup=keyboard
     )
 
 @bot.on_callback_query(filters.regex("owner_command"))
@@ -629,7 +610,7 @@ async def help_button(client, callback_query):
 
     await callback_query.message.edit_media(
         media=InputMediaPhoto(
-            media="https://envs.sh/Skr.jpg",
+            media="https://files.catbox.moe/9cqh82.jpg",
             caption=caption,
             parse_mode=ParseMode.HTML  # Enable HTML parsing
         ),
@@ -638,37 +619,26 @@ async def help_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("upgrade_command"))
 async def upgrade_button(client, callback_query):
-  user_id = callback_query.from_user.id
-  first_name = callback_query.from_user.first_name
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Main Menu", callback_data="back_to_main_menu")]])
-  caption = (
-           f" 🎉 Welcome [{first_name}](tg://user?id={user_id}) to DRM Bot! 🎉\n\n"
-           f"You can have access to download all Non-DRM+AES Encrypted URLs 🔐 including\n\n"
-           f"<blockquote>• 📚 Appx Zip+Encrypted Url\n"
-           f"• 🎓 Classplus DRM+ NDRM\n"
-           f"• 🧑‍🏫 PhysicsWallah DRM\n"
-           f"• 📚 CareerWill + PDF\n"
-           f"• 🎓 Khan GS\n"
-           f"• 🎓 Study Iq DRM\n"
-           f"• 🚀 APPX + APPX Enc PDF\n"
-           f"• 🎓 Vimeo Protection\n"
-           f"• 🎓 Brightcove Protection\n"
-           f"• 🎓 Visionias Protection\n"
-           f"• 🎓 Zoom Video\n"
-           f"• 🎓 Utkarsh Protection(Video + PDF)\n"
-           f"• 🎓 All Non DRM+AES Encrypted URLs\n"
-           f"• 🎓 MPD URLs if the key is known (e.g., Mpd_url?key=key XX:XX)</blockquote>\n\n"
-           f"<b>💵 Monthly Plan: 100 INR</b>\n\n"
-           f"If you want to buy membership of the bot, feel free to contact [{CREDIT}](tg://user?id={OWNER})\n"
-    )  
-    
-  await callback_query.message.edit_media(
-    InputMediaPhoto(
-      media="https://envs.sh/GVI.jpg",
-      caption=caption
-    ),
-    reply_markup=keyboard
+    user_id = callback_query.from_user.id
+    first_name = callback_query.from_user.first_name
+    keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Main Menu", callback_data="back_to_main_menu")]])
+
+    caption = UPGRADE_COMMANDS_CAPTION.format(
+        first_name=first_name,
+        user_id=user_id,
+        CREDIT=CREDIT,
+        OWNER=OWNER
     )
+
+    await callback_query.message.edit_media(
+        InputMediaPhoto(
+            media="https://envs.sh/SrY.jpg/IMG20250728844.jpg",
+            caption=caption,
+            parse_mode=ParseMode.HTML  # Import होना चाहिए
+        ),
+        reply_markup=keyboard
+    )
+
 
 @bot.on_callback_query(filters.regex("feat_command"))
 async def feature_button(client, callback_query):
