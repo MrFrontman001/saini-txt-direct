@@ -33,6 +33,7 @@ from pyrogram.errors import FloodWait, PeerIdInvalid, UserIsBlocked, InputUserDe
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from Script import OWNER_COMMANDS_CAPTION
 import aiohttp
 import aiofiles
 import zipfile
@@ -583,9 +584,9 @@ async def help_button(client, callback_query):
   first_name = callback_query.from_user.first_name
 keyboard = InlineKeyboardMarkup(
         [[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]]
-    )
+  )
 
-    caption = OWNER_COMMANDS_CAPTION.format(credit=CREDIT)
+  caption = OWNER_COMMANDS_CAPTION.format(credit=CREDIT)
 
   await callback_query.message.edit_media(
     media=InputMediaPhoto(
