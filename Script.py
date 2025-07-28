@@ -1,16 +1,13 @@
 OWNER_COMMANDS_CAPTION = """
-<b>👤 𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬
+<b><u>𝗕𝗢𝗧 𝗢𝘄𝗻𝗲𝗿 𝗖𝗠𝗗𝗦 💌 </u>
 
+<blockquote>
 ➥ /addauth xxxx – Aᴅᴅ Uꜱᴇʀ ID  
 ➥ /ʀrmauth xxxx – Rᴇᴍᴏᴠᴇ Uꜱᴇʀ ID  
 ➥ /users – Tᴏᴛᴀʟ Uꜱᴇʀ Lɪꜱᴛ  
 ➥ /broadcast – Fᴏʀ Bʀᴏᴀᴅᴄᴀꜱᴛɪɴɢ  
 ➥ /broadusers – Aʟʟ Bʀᴏᴀᴅᴄᴀꜱᴛɪɴɢ Uꜱᴇʀꜱ  
-➥ /reset – Rᴇꜱᴇᴛ Bᴏᴛ  
-▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰  
-╭────────⊰◆⊱────────╮  
- ➠ 𝐎𝐰𝐧𝐞𝐫 𝐎𝐧𝐥𝐲  
-╰────────⊰◆⊱────────╯</b>
+➥ /reset – Rᴇꜱᴇᴛ Bᴏᴛ </b></blockquote>
 """
 
 USER_COMMANDS_CAPTION = """
@@ -22,13 +19,12 @@ USER_COMMANDS_CAPTION = """
 ➥ /ytm – YᴏᴜTᴜʙᴇ → .ᴍᴘ𝟹 ᴅᴏᴡɴʟᴏᴀᴅᴇʀ  
 ➥ /t2t– Tᴇxᴛ → .ᴛxᴛ Gᴇɴᴇʀᴀᴛᴏʀ  
 ➥ /stop– Cᴀɴᴄᴇʟ Rᴜɴɴɪɴɢ Tᴀꜱᴋ  </blockquote>
-▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰  
+
 ⚙️ 𝗧𝗼𝗼𝗹𝘀 & 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀:
 <blockquote>➥ /cookies– Uᴘᴅᴀᴛᴇ YT Cᴏᴏᴋɪᴇꜱ  
 ➥ /id – Gᴇᴛ Cʜᴀᴛ/Uꜱᴇʀ ID  
 ➥ /info – Uꜱᴇʀ Dᴇᴛᴀɪʟꜱ  
 ➥ /logs – Vɪᴇᴡ Bᴏᴛ Aᴄᴛɪᴠɪᴛʏ  </blockquote>
-▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
 💡 𝗡𝗼𝘁𝗲:
 
@@ -36,11 +32,7 @@ USER_COMMANDS_CAPTION = """
 • Sᴜᴘᴘᴏʀᴛꜱ ʙᴀᴛᴄʜ ᴘʀᴏᴄᴇꜱꜱɪɴɢ</b>"""
 
 UPGRADE_COMMANDS_CAPTION = """
-<b>☘️ Wᴇʟᴄᴏᴍᴇ {first_name} ᴛᴏ DRM Bᴏᴛ! 🎉
-
-Yᴏᴜ ᴄᴀɴ ʜᴀᴠᴇ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴀʟʟ Nᴏɴ-DRM+AES Eɴᴄʀʏᴘᴛᴇᴅ URLꜱ 🔐 ɪɴᴄʟᴜᴅɪɴɢ
-
-<blockquote>
+<b><blockquote>
 • 📚 Aᴘᴘx Zɪᴘ+Eɴᴄʀʏᴘᴛᴇᴅ Uʀʟ  
 • 🎓 Cʟᴀꜱꜱᴘʟᴜꜱ DRM+ NDRM  
 • 🧑‍🏫 PʜʏꜱɪᴄꜱWᴀʟʟᴀʜ DRM  
@@ -54,9 +46,9 @@ Yᴏᴜ ᴄᴀɴ ʜᴀᴠᴇ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ �
 • 🎓 Zᴏᴏᴍ Vɪᴅᴇᴏ  
 • 🎓 Uᴛᴋᴀʀꜱʜ Pʀᴏᴛᴇᴄᴛɪᴏɴ(Vɪᴅᴇᴏ + PDF)  
 • 🎓 Aʟʟ Nᴏɴ DRM+AES Eɴᴄʀʏᴘᴛᴇᴅ URLꜱ  
-• 🎓 MPD URLꜱ ɪғ ᴛʜᴇ ᴋᴇʏ ɪꜱ ᴋɴᴏᴡɴ (ᴇ.ɢ., Mᴘᴅ_ᴜʀʟ?ᴋᴇʏ=ᴋᴇʏ XX:XX)</blockquote>
+• 🎓 MPD URLꜱ ɪғ ᴛʜᴇ ᴋᴇʏ ɪꜱ ᴋɴᴏᴡɴ (EX., Mpd_url?key=key XX:XX)</blockquote>
 
-💵 Mᴏɴᴛʜʟʏ Pʟᴀɴ: 𝟷𝟶𝟶 INR
+Yᴏᴜ ᴄᴀɴ ʜᴀᴠᴇ ᴀᴄᴄᴇꜱꜱ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴀʟʟ Non-DRM+AES Eɴᴄʀʏᴘᴛᴇᴅ URLꜱ 🔐
 
-Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʙᴜʏ ᴍᴇᴍʙᴇʀꜱʜɪᴘ ᴏғ ᴛʜᴇ ʙᴏᴛ, ғᴇᴇʟ ғʀᴇᴇ ᴛᴏ ᴄᴏɴᴛᴀᴄᴛ</b>"""
+💵 ᴅᴀɪʟʏ ᴄʜᴀʀɢᴇ: 𝟷𝟶𝟶 INR</b>"""
 # ध्यान दें: अब {CREDIT} या {credit} कहीं नहीं है।
