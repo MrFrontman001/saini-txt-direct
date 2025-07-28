@@ -586,7 +586,7 @@ keyboard = InlineKeyboardMarkup(
         [[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]]
   )
 
-  caption = OWNER_COMMANDS_CAPTION.format(credit=CREDIT)
+    caption = OWNER_COMMANDS_CAPTION.format(credit=CREDIT)
 
   await callback_query.message.edit_media(
     media=InputMediaPhoto(
