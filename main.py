@@ -512,7 +512,7 @@ async def start(bot, m: Message):
 
     await asyncio.sleep(0.3)
     await start_message.edit_text(
-        f"🔃 𝕚𝕟𝕚𝕥𝕚𝕒𝕝𝕚𝕫𝕚𝕟𝕘 𝕪𝕠𝕦𝕣 𝕕𝕒𝕤𝕙𝕓𝕠𝕒𝕣𝕕"
+        f"🔄 𝕚𝕟𝕚𝕥𝕚𝕒𝕝𝕚𝕫𝕚𝕟𝕘 𝕪𝕠𝕦𝕣 𝕕𝕒𝕤𝕙𝕓𝕠𝕒𝕣𝕕"
     )
 
     await asyncio.sleep(0.3)
