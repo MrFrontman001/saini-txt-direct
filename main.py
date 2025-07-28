@@ -535,8 +535,7 @@ async def start(bot, m: Message):
             [InlineKeyboardButton(text="☎️ Cᴏɴᴛᴀᴄᴛ", url="https://t.me/MrFrontMan001"), InlineKeyboardButton(text="Cʜᴀɴɴᴇʟ 📢", url="http://t.me/DevThanos")],
         ])
         await start_message.edit_text(
-           f"Hᴇʏ {m.from_user.first_name}☘️\n\n"
-           f"**You are currently using the free version.** 🆓\n\n<blockquote expandable>I'm here to make your life easier by downloading videos from your **.txt** file 📄 and uploading them directly to Telegram!</blockquote>\n\n**Want to get started? Press /id**\n\n💬 Contact : [{CREDIT}⁬](tg://openmessage?user_id={OWNER}) to Get The Subscription 🎫 and unlock the full potential of your new bot! 🔓\n", disable_web_page_preview=True, reply_markup=keyboard
+           f"<b>Yᴏᴜ ᴀʀᴇ ᴄᴜʀʀᴇɴᴛʟʏ ᴜꜱɪɴɢ ᴛʜᴇ ғʀᴇᴇ ᴠᴇʀꜱɪᴏɴ. 🆓\n\n<blockquote>ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ᴍᴀᴋᴇ ʏᴏᴜʀ ʟɪғᴇ ᴇᴀꜱɪᴇʀ ʙʏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴠɪᴅᴇᴏꜱ ғʀᴏᴍ ʏᴏᴜʀ .ᴛxᴛ ғɪʟᴇ 📄 \n& ᴜᴘʟᴏᴀᴅɪɴɢ ᴛʜᴇᴍ ᴅɪʀᴇᴄᴛʟʏ ᴛᴏ Tᴇʟᴇɢʀᴀᴍ!</blockquote>\n\nCʟɪᴄᴋ ᴏɴ 🗓️ <u>ᴘʟᴀɴ</u> 🗓️ ᴛᴏ ɢᴇᴛ ᴀᴄᴄᴇꜱꜱ ᴏғ ᴛʜɪꜱ ʙᴏᴛ ᴀᴛ ᴄʜᴇᴀᴘ ᴘʀɪᴄᴇ</b>\n", disable_web_page_preview=True, reply_markup=keyboard
     )
 
 @bot.on_callback_query(filters.regex("back_to_main_menu"))
@@ -625,7 +624,7 @@ async def help_button(client, callback_query):
 @bot.on_callback_query(filters.regex("upgrade_command"))
 async def upgrade_button(client, callback_query):
     first_name = callback_query.from_user.first_name
-    keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Main Menu", callback_data="back_to_main_menu")]])
+    keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back", callback_data="back_to_main_menu"), InlineKeyboardButton("Buy Plan 🍁", url="https://t.me/MRfrontman001")]])
 
     caption = UPGRADE_COMMANDS_CAPTION.format(
         first_name=first_name
