@@ -587,7 +587,7 @@ async def help_button(client, callback_query):
         [[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]]
     )
 
-    caption = USER_COMMANDS_CAPTION.format(credit=CREDIT)
+    caption = USER_COMMANDS_CAPTION  # अब सिर्फ डायरेक्ट इस्तेमाल करें
 
     await callback_query.message.edit_media(
         media=InputMediaPhoto(
@@ -606,7 +606,7 @@ async def help_button(client, callback_query):
         [[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]]
     )
 
-    caption = OWNER_COMMANDS_CAPTION.format(credit=CREDIT)
+    caption = OWNER_COMMANDS_CAPTION  # अब सिर्फ डायरेक्ट इस्तेमाल करें, कोई .format नहीं
 
     await callback_query.message.edit_media(
         media=InputMediaPhoto(
@@ -619,29 +619,25 @@ async def help_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("upgrade_command"))
 async def upgrade_button(client, callback_query):
-    user_id = callback_query.from_user.id
     first_name = callback_query.from_user.first_name
     keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Main Menu", callback_data="back_to_main_menu")]])
 
     caption = UPGRADE_COMMANDS_CAPTION.format(
-        first_name=first_name,
-        user_id=user_id,
-        CREDIT=CREDIT,
-        OWNER=OWNER
+        first_name=first_name
     )
 
     await callback_query.message.edit_media(
         InputMediaPhoto(
             media="https://envs.sh/SrY.jpg/IMG20250728844.jpg",
             caption=caption,
-            parse_mode=ParseMode.HTML  # Import होना चाहिए
+            parse_mode=ParseMode.HTML
         ),
         reply_markup=keyboard
     )
 
-
 @bot.on_callback_query(filters.regex("feat_command"))
 async def feature_button(client, callback_query):
+  caption = "**✨ My Premium BOT Features :**"
   keyboard = InlineKeyboardMarkup([
       [InlineKeyboardButton("📌 Aᴜᴛᴏ ᴘɪɴ ʙᴀᴛᴄʜ", callback_data="pin_command")],
       [InlineKeyboardButton("🖼️ Wᴀᴛᴇʀᴍᴀʀᴋ", callback_data="watermark_command"), InlineKeyboardButton("Rᴇꜱᴇᴛ 🗑️", callback_data="reset_command")],
@@ -653,7 +649,7 @@ async def feature_button(client, callback_query):
   ])
   await callback_query.message.edit_media(
     InputMediaPhoto(
-      media="https://tinypic.host/images/2025/07/14/file_000000002d44622f856a002a219cf27aconversation_id68747543-56d8-800e-ae47-bb6438a09851message_id8e8cbfb5-ea6c-4f59-974a-43bdf87130c0.png",
+      media="https://files.catbox.moe/7ptwfo.jpg",
       caption=caption
     ),
     reply_markup=keyboard
