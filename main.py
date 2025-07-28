@@ -580,22 +580,23 @@ async def cmd(client, callback_query):
 
 @bot.on_callback_query(filters.regex("owner_command"))
 async def help_button(client, callback_query):
-  user_id = callback_query.from_user.id
-  first_name = callback_query.from_user.first_name
-keyboard = InlineKeyboardMarkup(
+    user_id = callback_query.from_user.id
+    first_name = callback_query.from_user.first_name
+    keyboard = InlineKeyboardMarkup(
         [[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]]
-  )
+    )
 
     caption = OWNER_COMMANDS_CAPTION.format(credit=CREDIT)
 
-  await callback_query.message.edit_media(
-    media=InputMediaPhoto(
-      media="https://envs.sh/Skr.jpg",
-      caption=caption,
-      parse_mode=ParseMode.HTML  # Enable HTML parsing
-    ),
-    reply_markup=keyboard
+    await callback_query.message.edit_media(
+        media=InputMediaPhoto(
+            media="https://envs.sh/Skr.jpg",
+            caption=caption,
+            parse_mode=ParseMode.HTML  # Enable HTML parsing
+        ),
+        reply_markup=keyboard
     )
+
 @bot.on_callback_query(filters.regex("owner_command"))
 async def help_button(client, callback_query):
   user_id = callback_query.from_user.id
