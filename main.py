@@ -526,7 +526,7 @@ async def start(bot, m: Message):
         await start_message.edit_text(
             f"<b>Mʀ. {m.from_user.first_name}  ☘️</b>\n\n" +
             f"<b><blockquote expandable>Yᴏᴜ ᴀʀᴇ ᴏᴜʀ ᴘʀᴇᴍɪᴜᴍ ᴍᴇᴍʙᴇʀ 🔖\n\n ʏᴏᴜ ᴄᴀɴ ᴜꜱᴇ ᴏᴜʀ ʙᴏᴛ ᴡɪᴛʜᴏᴜᴛ ʟɪᴍɪᴛᴀᴛɪᴏɴ\n ᴄʟɪᴄᴋ ᴏɴ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛᴏ ᴋɴᴏᴡ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇꜱ</blockquote></b>\n\n\n" +
-            f"<b><blockquote expandable>‣ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ғʀᴏɴᴛᴍᴀɴ⁬ 🦅](https://t.me/MrFrontMan001)</blockquote></b>", disable_web_page_preview=True, reply_markup=keyboard
+            f"<b><blockquote>‣ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : [ғʀᴏɴᴛᴍᴀɴ⁬ 🦅](https://t.me/MrFrontMan001)</b></blockquote>", disable_web_page_preview=True, reply_markup=keyboard
         )
     else:
         await asyncio.sleep(2)
