@@ -495,27 +495,27 @@ async def start(bot, m: Message):
         caption=caption
     )
 
-    await asyncio.sleep(0.1)
+    await asyncio.sleep(0.3)
     await start_message.edit_text(
         f"🔃 𝕚𝕟𝕚𝕥𝕚𝕒𝕝𝕚𝕫𝕚𝕟𝕘 𝕪𝕠𝕦𝕣 𝕕𝕒𝕤𝕙𝕓𝕠𝕒𝕣𝕕"
     )
 
-    await asyncio.sleep(0.1)
+    await asyncio.sleep(0.3)
     await start_message.edit_text(
         f"🔄 𝕚𝕟𝕚𝕥𝕚𝕒𝕝𝕚𝕫𝕚𝕟𝕘 𝕪𝕠𝕦𝕣 𝕕𝕒𝕤𝕙𝕓𝕠𝕒𝕣𝕕"
     )
     
-    await asyncio.sleep(0.1)
+    await asyncio.sleep(0.3)
     await start_message.edit_text(
         f"🔃 𝕚𝕟𝕚𝕥𝕚𝕒𝕝𝕚𝕫𝕚𝕟𝕘 𝕪𝕠𝕦𝕣 𝕕𝕒𝕤𝕙𝕓𝕠𝕒𝕣𝕕"
     )
 
-    await asyncio.sleep(0.1)
+    await asyncio.sleep(0.3)
     await start_message.edit_text(
-        f"🔄 𝕚𝕟𝕚𝕥𝕚𝕒𝕝𝕚𝕫𝕚𝕟𝕘 𝕪𝕠𝕦𝕣 𝕕𝕒𝕤𝕙𝕓𝕠𝕒𝕣𝕕"
+        f"🔃 𝕚𝕟𝕚𝕥𝕚𝕒𝕝𝕚𝕫𝕚𝕟𝕘 𝕪𝕠𝕦𝕣 𝕕𝕒𝕤𝕙𝕓𝕠𝕒𝕣𝕕"
     )
 
-    await asyncio.sleep(1)
+    await asyncio.sleep(0.3)
     if m.chat.id in AUTH_USERS:
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("🍁 Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command"), InlineKeyboardButton("Cᴏᴍᴍᴀɴᴅꜱ 🪧", callback_data="cmd_command")],
@@ -554,7 +554,7 @@ async def back_to_main_menu(client, callback_query):
     
     await callback_query.message.edit_media(
       InputMediaPhoto(
-        media="https://envs.sh/Sks.jpg",
+        media="https://envs.sh/GVI.jpg",
         caption=caption
       ),
       reply_markup=keyboard
@@ -567,17 +567,55 @@ async def cmd(client, callback_query):
     first_name = callback_query.from_user.first_name
     caption = f"**Hᴇʏ Mʀ.[{first_name}](tg://user?id={user_id})☘️**"
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("👥 Users", callback_data="user_command"), InlineKeyboardButton("🍁 Admin", callback_data="owner_command")],
-        [InlineKeyboardButton("👩‍🦯 Back", callback_data="back_to_main_menu")]
+        [InlineKeyboardButton("👥 Uꜱᴇʀꜱ", callback_data="user_command"), InlineKeyboardButton("🍁 Aᴅᴍɪɴ", callback_data="owner_command")],
+        [InlineKeyboardButton("👩‍🦯 Bᴀᴄᴋ", callback_data="back_to_main_menu")]
     ])
     await callback_query.message.edit_media(
     InputMediaPhoto(
-      media="https://envs.sh/Sks.jpg",
+      media="https://tinypic.host/images/2025/07/14/file_00000000fc2461fbbdd6bc500cecbff8_conversation_id6874702c-9760-800e-b0bf-8e0bcf8a3833message_id964012ce-7ef5-4ad4-88e0-1c41ed240c03-1-1.jpg",
       caption=caption
     ),
     reply_markup=keyboard
     )
 
+
+@bot.on_callback_query(filters.regex("user_command"))
+async def help_button(client, callback_query):
+  user_id = callback_query.from_user.id
+  first_name = callback_query.from_user.first_name
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]])
+  caption = (
+        f"💥 𝐁𝐎𝐓𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒\n"
+        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n" 
+        f"📌 𝗠𝗮𝗶𝗻 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀:\n\n"  
+        f"➥ /start – Bot Status Check\n"
+        f"➥ /drm – Extract from .txt (Auto)\n"
+        f"➥ /y2t – YouTube → .txt Converter\n"  
+        f"➥ /ytm – YouTube → .mp3 downloader\n"  
+        f"➥ /t2t – Text → .txt Generator\n" 
+        f"➥ /stop – Cancel Running Task\n"
+        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ \n" 
+        f"⚙️ 𝗧𝗼𝗼𝗹𝘀 & 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀: \n\n" 
+        f"➥ /cookies – Update YT Cookies\n" 
+        f"➥ /id – Get Chat/User ID\n"  
+        f"➥ /info – User Details\n"  
+        f"➥ /logs – View Bot Activity\n"
+        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
+        f"💡 𝗡𝗼𝘁𝗲:\n\n"  
+        f"• Send any link for auto-extraction\n"  
+        f"• Supports batch processing\n\n"  
+        f"╭────────⊰◆⊱────────╮\n"   
+        f" ➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : {CREDIT} 💻\n"
+        f"╰────────⊰◆⊱────────╯\n"
+  )
+    
+  await callback_query.message.edit_media(
+    InputMediaPhoto(
+      media="https://tinypic.host/images/2025/07/14/file_00000000fc2461fbbdd6bc500cecbff8_conversation_id6874702c-9760-800e-b0bf-8e0bcf8a3833message_id964012ce-7ef5-4ad4-88e0-1c41ed240c03-1-1.jpg",
+      caption=caption
+    ),
+    reply_markup=keyboard
+    )
 
 @bot.on_callback_query(filters.regex("owner_command"))
 async def help_button(client, callback_query):
@@ -597,29 +635,10 @@ async def help_button(client, callback_query):
         ),
         reply_markup=keyboard
     )
-
-@bot.on_callback_query(filters.regex("owner_command"))
-async def help_button(client, callback_query):
-  user_id = callback_query.from_user.id
-  first_name = callback_query.from_user.first_name
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Commands", callback_data="cmd_command")]])
-  caption = (
-        f"👤 𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬\n\n" 
-        f"➥ /addauth xxxx – Add User ID\n" 
-        f"➥ /rmauth xxxx – Remove User ID\n"  
-        f"➥ /users – Total User List\n"  
-        f"➥ /broadcast – For Broadcasting\n"  
-        f"➥ /broadusers – All Broadcasting Users\n"  
-        f"➥ /reset – Reset Bot\n"
-        f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"  
-        f"╭────────⊰◆⊱────────╮\n"   
-        f" ➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : {CREDIT} 💻\n"
-        f"╰────────⊰◆⊱────────╯\n"
-  )
     
   await callback_query.message.edit_media(
     InputMediaPhoto(
-      media="https://envs.sh/Skr.jpg",
+      media="https://tinypic.host/images/2025/07/14/file_00000000fc2461fbbdd6bc500cecbff8_conversation_id6874702c-9760-800e-b0bf-8e0bcf8a3833message_id964012ce-7ef5-4ad4-88e0-1c41ed240c03-1-1.jpg",
       caption=caption
     ),
     reply_markup=keyboard
@@ -661,7 +680,6 @@ async def upgrade_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("feat_command"))
 async def feature_button(client, callback_query):
-  caption = "**✨ My Premium BOT Features :**"
   keyboard = InlineKeyboardMarkup([
       [InlineKeyboardButton("📌 Aᴜᴛᴏ ᴘɪɴ ʙᴀᴛᴄʜ", callback_data="pin_command")],
       [InlineKeyboardButton("🖼️ Wᴀᴛᴇʀᴍᴀʀᴋ", callback_data="watermark_command"), InlineKeyboardButton("Rᴇꜱᴇᴛ 🗑️", callback_data="reset_command")],
@@ -681,7 +699,7 @@ async def feature_button(client, callback_query):
 
 @bot.on_callback_query(filters.regex("pin_command"))
 async def pin_button(client, callback_query):
-  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
+  keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
   caption = f"**Auto Pin 📌 Batch Name :**\n\nAutomatically Pins the Batch Name in Channel or Group, If Starting from the First Link."
   await callback_query.message.edit_media(
     InputMediaPhoto(
@@ -707,7 +725,7 @@ async def watermark_button(client, callback_query):
 @bot.on_callback_query(filters.regex("reset_command"))
 async def restart_button(client, callback_query):
   keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🍁 Bᴀᴄᴋ Oɴ Fᴇᴀᴛᴜʀᴇꜱ", callback_data="feat_command")]])
-  caption = f"**🗑️ Rᴇꜱᴇᴛ Cᴏᴍᴍᴀɴᴅ:**\n\nIғ Yᴏᴜ Wᴀɴᴛ ᴛᴏ Rᴇꜱᴇᴛ ᴏʀ Rᴇꜱᴛᴀʀᴛ Yᴏᴜʀ Bᴏᴛ, Sɪᴍᴘʟʏ Uꜱᴇ Cᴏᴍᴍᴀɴᴅ /reset."
+  caption = f"**🔄 Reset Command:**\n\nIf You Want to Reset or Restart Your Bot, Simply Use Command /reset."
   await callback_query.message.edit_media(
     InputMediaPhoto(
       media="https://tinypic.host/images/2025/07/14/file_000000002d44622f856a002a219cf27aconversation_id68747543-56d8-800e-ae47-bb6438a09851message_id8e8cbfb5-ea6c-4f59-974a-43bdf87130c0.png",
