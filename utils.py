@@ -7,7 +7,7 @@ from pyrogram.errors import FloodWait #NIKHIL SAINI BOTS
 from datetime import datetime,timedelta #NIKHIL SAINI BOTS
 
 class Timer: #NIKHIL SAINI BOTS
-    def __init__(self, time_between=5): #NIKHIL SAINI BOTS
+    def __init__(self, time_between=3): #NIKHIL SAINI BOTS
         self.start_time = time.time() #NIKHIL SAINI BOTS
         self.time_between = time_between #NIKHIL SAINI BOTS
 
